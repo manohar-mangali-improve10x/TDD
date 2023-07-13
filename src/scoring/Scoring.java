@@ -4,10 +4,7 @@ import java.util.Arrays;
 
 public class Scoring {
     public static void main(String[] args) {
-//        Scoring scoring = new Scoring();
-//        int[] gf  = scoring.caluculateScore("AAABBCC");
-//        System.out.printf(String.valueOf(gf));
-       int[] array = caluculateScore("AAAA");
+       int[] array = caluculateScore("AAABBCCBCA");
         System.out.println(Arrays.toString(array));
     }
 
