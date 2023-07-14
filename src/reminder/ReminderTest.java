@@ -10,11 +10,10 @@ public class ReminderTest {
     public void nothing() {
 
     }
-//    @Test
-//    public void givenFive_returnZero() {
-//        Reminder reminder = new Reminder();
-//       int value =  reminder.findDivision(5,5);
-//       assertEquals(0,value);
-//    }
-//    }
-}
+    @Test
+    public void givenFive_returnZero() {
+        Reminder reminder = new Reminder();
+       int value =  reminder.findDivision(5,5);
+       assertEquals(0,value);
+    }
+    }
