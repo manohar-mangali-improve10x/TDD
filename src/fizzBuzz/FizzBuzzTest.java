@@ -33,4 +33,17 @@ public class FizzBuzzTest {
         String name = fizzBuzz.find(15);
         assertEquals("FizzBuzz",name);
     }
+    @Test
+    public void givenZero_returnZero(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String name = fizzBuzz.find(0);
+        assertEquals("0",name);
+    }
+
+    @Test
+    public void givenMinusOne_returnMinusOne(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String name = fizzBuzz.find(-1);
+        assertEquals("-1",name);
+    }
 }
