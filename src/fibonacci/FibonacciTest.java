@@ -31,4 +31,12 @@ public class FibonacciTest {
         int zeroFibonacci = fibonacci.find(1);
         assertEquals(0,zeroFibonacci);
     }
+
+    @Test
+    public void givenTwo_returnOne(){
+        Fibonacci fibonacci = new Fibonacci();
+        int oneFibonacci = fibonacci.find(2);
+        assertEquals(1,oneFibonacci);
+    }
+
 }
