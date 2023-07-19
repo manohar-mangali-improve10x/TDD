@@ -34,4 +34,10 @@ public class ScoringTest {
         int[] onlyAScore = scoring.calculateScores("A");
         assertArrayEquals(new int[] {1,0,0},onlyAScore);
     }
+
+    @Test
+    public void givenB_returnZeroOneZero(){
+        int[] onlyBScore = scoring.calculateScores("B");
+        assertArrayEquals(new int[] {0,1,0},onlyBScore);
+    }
 }
