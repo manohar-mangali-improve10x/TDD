@@ -24,4 +24,11 @@ public class FibonacciTest {
         int negativeFibonacci = fibonacci.find(0);
         assertEquals(-1,negativeFibonacci);
     }
+
+    @Test
+    public void givenOne_returnZero(){
+        Fibonacci fibonacci = new Fibonacci();
+        int zeroFibonacci = fibonacci.find(1);
+        assertEquals(0,zeroFibonacci);
+    }
 }
