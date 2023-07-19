@@ -28,4 +28,10 @@ public class ScoringTest {
         int[] allZeros = scoring.calculateScores("");
         assertArrayEquals(new int[3],allZeros);
     }
+
+    @Test
+    public void givenA_returnOneZeroZero(){
+        int[] onlyAScore = scoring.calculateScores("A");
+        assertArrayEquals(new int[] {1,0,0},onlyAScore);
+    }
 }
