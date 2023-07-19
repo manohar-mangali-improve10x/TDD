@@ -53,4 +53,11 @@ public class FibonacciTest {
         assertEquals(2,twoFibonacci);
     }
 
+    @Test
+    public void givenSeven_returnEight(){
+        Fibonacci fibonacci = new Fibonacci();
+        int oneFibonacci = fibonacci.find(7);
+        assertEquals(8,oneFibonacci);
+    }
+
 }
