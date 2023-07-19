@@ -10,7 +10,8 @@ public class Fibonacci {
           return 0;
         } else if (number == 2) {
             return 1;
+        }else {
+           return find(number-1) + find(number-2);
         }
-        return number;
     }
 }
