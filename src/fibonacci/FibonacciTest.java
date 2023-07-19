@@ -46,4 +46,11 @@ public class FibonacciTest {
         assertEquals(1,oneFibonacci);
     }
 
+    @Test
+    public void givenFour_returnTwo(){
+        Fibonacci fibonacci = new Fibonacci();
+        int twoFibonacci = fibonacci.find(4);
+        assertEquals(2,twoFibonacci);
+    }
+
 }
