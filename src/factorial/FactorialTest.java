@@ -1,35 +1,47 @@
 package factorial;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FactorialTest {
+    private Factorial factorial;
+    @BeforeEach
+    public void setup(){
+        factorial = new Factorial();
+    }
     @Test
     public void nothing(){
 
     }
     @Test
     public void givenFive_return120(){
-        Factorial factorial = new Factorial();
-        int value = factorial.find(5);
+        int value = factorial.findFactorial(5);
         assertEquals(120,value);
     }
     @Test
     public void given1_return1(){
-        Factorial factorial = new Factorial();
-        int value = factorial.find(1);
+        int value = factorial.findFactorial(-15);
+        assertEquals(-1,value);
+    }
+    @Test
+    public void givenOne_returnOne(){
+        int value = factorial.findFactorial(1);
         assertEquals(1,value);
     }
     @Test
-    public void given0_return0(){
-        Factorial factorial = new Factorial();
-        int value = factorial.find(0);
-        assertEquals(0,value);
+    public void givenMinusOne_returnMinusOne(){
+        int value = factorial.findFactorial(-1);
+        assertEquals(-1,value);
+    }
+    @Test
+    public void givenZero_returnMinusOne(){
+        int value = factorial.findFactorial(0);
+        assertEquals(-1,value);
     }
     @Test
     public void givenFour_return24(){
-        Factorial factorial = new Factorial();
-        int value = factorial.find(5);
-        assertEquals(120,value);
+        int value = factorial.findFactorial(4);
+        assertEquals(24,value);
     }
 }

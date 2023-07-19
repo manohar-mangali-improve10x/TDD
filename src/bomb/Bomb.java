@@ -2,15 +2,23 @@ package bomb;
 
 public class Bomb {
     public static void main(String[] args) {
-        String name = find("there is Manohar ");
+        String name = find("");
         System.out.println(name);
     }
     public static String find(String text) {
-        if (text.contains("Bomb")){
-            return "Duck";
-        }else if (text.contains("Manohar")){
-            return "Manu";
+        String result = "";
+        if (text == null){
+            return "null";
         }
-        return "relax ,there is no bomb";
+        if (text == ""){
+            return "";
+        }
+        if (text.toLowerCase().contains("bomb")){
+            result = "Duck";
+        }else {
+            result = "relax ,there is no bomb";
+        }
+            return result;
+        }
+
     }
-}

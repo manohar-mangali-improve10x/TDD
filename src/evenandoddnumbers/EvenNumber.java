@@ -2,7 +2,7 @@ package evenandoddnumbers;
 
 public class EvenNumber {
     public static void main(String[] args) {
-        boolean v = find(2);
+        boolean v = find(0);
         System.out.println(v);
     }
     public static boolean find(int i) {

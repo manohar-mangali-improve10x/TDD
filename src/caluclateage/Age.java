@@ -1,7 +1,7 @@
 package caluclateage;
 
 public class Age {
-    public int find(int age) {
+    public int caluculateAge(int age) {
         int value = -1;
         if (age == 0){
             value = 0;

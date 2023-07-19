@@ -1,41 +1,47 @@
 package divisiblebyfive;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DivisibleByFiveTest {
+    private Divisible divisible;
+    @BeforeEach
+    public void setup(){
+        divisible = new Divisible();
+    }
     @Test
     public void nothing(){
 
     }
     @Test
     public void givenTen_returnTrue(){
-        Divisible divisible = new Divisible();
-        boolean result = divisible.find(10);
+        boolean result = divisible.findDivisible(-10);
         assertEquals(true,result);
     }
     @Test
     public void givenZero_returnFalse(){
-        Divisible divisible = new Divisible();
-        boolean result = divisible.find(0);
+        boolean result = divisible.findDivisible(0);
         assertEquals(true,result);
     }
     @Test
     public void givenMinusOne_returnFalse(){
-        Divisible divisible = new Divisible();
-        boolean result = divisible.find(-1);
+        boolean result = divisible.findDivisible(-1);
+        assertEquals(false,result);
+    }
+    @Test
+    public void givenOne_returnFalse(){
+        boolean result = divisible.findDivisible(1);
         assertEquals(false,result);
     }
     @Test
     public void givenFifteen_returnTrue(){
-        Divisible divisible = new Divisible();
-        boolean result = divisible.find(15);
+        boolean result = divisible.findDivisible(15);
         assertEquals(true,result);
     }
     @Test
     public void giveFifty_returnTrue(){
-        Divisible divisible = new Divisible();
-        boolean result = divisible.find(50);
+        boolean result = divisible.findDivisible(50);
         assertEquals(true,result);
     }
 }

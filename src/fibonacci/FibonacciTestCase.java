@@ -41,9 +41,9 @@ public class FibonacciTestCase {
         assertEquals(1,threeFibonacci);
     }
     @Test
-    public void givenFive_returnThree(){
+    public void givenFour_returnTwo(){
         Fibonacci fibonacci = new Fibonacci();
-        int fiveFibonacci = fibonacci.find(5);
-        assertEquals(3,fiveFibonacci);
+        int fiveFibonacci = fibonacci.find(4);
+        assertEquals(2,fiveFibonacci);
     }
 }
