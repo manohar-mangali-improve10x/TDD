@@ -52,4 +52,10 @@ public class ScoringTest {
         assertArrayEquals(new int[] {1,1,0},onlyABScore);
     }
 
+    @Test
+    public void givenABC_returnOneOnOne(){
+        int[] onlyABCScore = scoring.calculateScores("ABC");
+        assertArrayEquals(new int[] {1,1,1},onlyABCScore);
+    }
+
 }
