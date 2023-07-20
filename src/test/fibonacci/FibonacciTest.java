@@ -1,6 +1,6 @@
 package fibonacci;
 
-import org.junit.jupiter.api.Assertions;
+import com.improve10x.tdd.fibonacci.Fibonacci;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

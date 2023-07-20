@@ -1,4 +1,4 @@
-package fibonacci;
+package com.improve10x.tdd.fibonacci;
 
 public class Fibonacci {
     public int find(int number) {
