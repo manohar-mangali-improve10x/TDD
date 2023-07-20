@@ -53,9 +53,33 @@ public class ScoringTest {
     }
 
     @Test
-    public void givenABC_returnOneOnOne(){
+    public void givenABC_returnOneOneOne(){
         int[] onlyABCScore = scoring.calculateScores("ABC");
         assertArrayEquals(new int[] {1,1,1},onlyABCScore);
+    }
+
+    @Test
+    public void givenAABC_returnTwoOneOne(){
+        int[] onlyAABCScore = scoring.calculateScores("AABC");
+        assertArrayEquals(new int[] {2,1,1},onlyAABCScore);
+    }
+
+    @Test
+    public void givenABBC_returnOneTwoOne(){
+        int[] onlyABBCScore = scoring.calculateScores("ABBC");
+        assertArrayEquals(new int[] {1,2,1},onlyABBCScore);
+    }
+
+    @Test
+    public void givenABCC_returnOneTwoOne(){
+        int[] onlyABCCScore = scoring.calculateScores("ABCC");
+        assertArrayEquals(new int[] {1,1,2},onlyABCCScore);
+    }
+
+    @Test
+    public void givenAAAABABBCC_returnOneTwoOne(){
+        int[] onlyAAAABABBCCScore = scoring.calculateScores("AAAABABBCC");
+        assertArrayEquals(new int[] {5,3,2},onlyAAAABABBCCScore);
     }
 
 }
