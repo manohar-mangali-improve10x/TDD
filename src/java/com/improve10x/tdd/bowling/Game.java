@@ -4,4 +4,8 @@ public class Game {
     public void roll(int roll) {
 
     }
+
+    public int score() {
+        return 0;
+    }
 }
