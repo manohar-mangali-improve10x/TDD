@@ -13,7 +13,10 @@ public class Game {
         int totalPins = 0;
         int firstInFrame = 0;
         for (int frame = 0;frame<10;frame++){
-            if (isSpare(firstInFrame)) {
+            if (isStrike(rolls[firstInFrame])){
+                totalPins += 10 + rolls[firstInFrame +1] + rolls[firstInFrame +2];
+                firstInFrame++;
+            } else if (isSpare(firstInFrame)) {
                 totalPins += 10 + firstInNextFrame(firstInFrame + 2);
                 firstInFrame += 2;
             }else {
@@ -22,6 +25,10 @@ public class Game {
             }
         }
         return totalPins;
+    }
+
+    private boolean isStrike(int rolls) {
+        return rolls == 10;
     }
 
     private int firstInNextFrame(int firstInFrame) {
