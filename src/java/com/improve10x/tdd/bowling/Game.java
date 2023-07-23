@@ -1,11 +1,14 @@
 package com.improve10x.tdd.bowling;
 
 public class Game {
-    public void roll(int roll) {
+    private int totalPins = 0;
+
+    public void roll(int pins) {
+        totalPins += pins;
 
     }
 
     public int score() {
-        return 0;
+        return totalPins;
     }
 }
