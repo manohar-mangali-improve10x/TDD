@@ -54,7 +54,7 @@ public class NameInverterTest {
 
     @Test
     public void givenMrHonorifics_returnIgnoreHonorifics(){
-        String invertedName = nameInverter.invertName("Mr. first last");
+        String invertedName = nameInverter.invertName("Miss. first last");
         assertEquals("last, first",invertedName);
     }
 

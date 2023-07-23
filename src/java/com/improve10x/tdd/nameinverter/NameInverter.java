@@ -19,7 +19,7 @@ public class NameInverter {
         ArrayList<String> names =new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
         removeHonorifics(names);
         String postNominal = getPostNominal(names.subList(2,names.size()));
-        return names.get(1) + ", " + names.get(0) + " " + postNominal.trim();
+        return (names.get(1) + ", " + names.get(0) + " " + postNominal).trim();
     }
 
     private static String getPostNominal(List<String> postNominalList) {
