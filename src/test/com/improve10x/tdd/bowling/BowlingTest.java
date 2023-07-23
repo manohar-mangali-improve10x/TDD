@@ -37,4 +37,12 @@ public class BowlingTest {
         rollMany(20, 1);
         assertEquals(20,game.score());
     }
+    @Test
+    public void oneSpare(){
+        game.roll(5);
+        game.roll(5);
+        game.roll(4);
+        rollMany(17,0);
+        assertEquals(18,game.score());
+    }
 }
