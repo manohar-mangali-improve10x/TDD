@@ -100,6 +100,13 @@ public class PlayerTest {
         assertEquals(30,player.getScore());
     }
 
+    @Test
+    public void whenJumpCalled_displayJumpingMessage(){
+        Player player = new Player("Name");
+        player.jump();
+        assertEquals("Name jump to avoid obstacle",outputStream.toString().trim());
+    }
+
 
 
 }
