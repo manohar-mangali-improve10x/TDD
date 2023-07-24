@@ -6,7 +6,6 @@ public class Player {
     public Player(String name) {
         this.name = (name == null) ? "" : name.trim();
         this.health = 100;
-        
     }
 
     public Player(String name, int health) {
@@ -23,6 +22,10 @@ public class Player {
 
     public int getHealth() {
         return health;
+    }
+
+    public void run() {
+        System.out.println("Running...!");
     }
 
     public class InvalidHealthException extends RuntimeException {
