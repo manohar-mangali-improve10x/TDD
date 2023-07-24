@@ -7,7 +7,18 @@ public class Player {
         
     }
 
+    public Player(String name, int health) {
+        throw new InvalidHealthException();
+    }
+
     public String getName() {
         return name;
+    }
+
+    public int getHealth() {
+        return 100;
+    }
+
+    public class InvalidHealthException extends RuntimeException {
     }
 }
