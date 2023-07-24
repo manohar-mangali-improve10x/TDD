@@ -86,5 +86,13 @@ public class PlayerTest {
         assertEquals(0,player.getScore());
     }
 
+    @Test
+    public void given10_whenGetScoreCalled_thenReturn10(){
+        Player player = new Player("name");
+        player.collectCoin(new Coin(10));
+        assertEquals(10,player.getScore());
+    }
+
+
 
 }

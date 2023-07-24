@@ -27,4 +27,9 @@ public class CoinTest {
     public void given10_whenGetValueCalled_return10(){
         assertEquals(10,new Coin(10).getValue());
     }
+
+    @Test
+    public void given30_whenGetValueCalled_return30(){
+        assertEquals(30,new Coin(30).getValue());
+    }
 }
