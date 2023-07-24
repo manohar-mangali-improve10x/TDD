@@ -3,6 +3,7 @@ package templerun;
 public class Player {
     private String name;
     private int health;
+    private int totalCoinValue;
     private int score;
     public Player(String name) {
         this.name = (name == null) ? "" : name.trim();
@@ -10,11 +11,11 @@ public class Player {
     }
 
     public Player(String name, int health) {
+        this.name = (name == null) ? "" : name.trim();
         if (health < 0 || health > 100) {
             throw new InvalidHealthException();
-        }else {
-            this.health = health;
         }
+            this.health = health;
     }
 
     public String getName() {
@@ -30,11 +31,12 @@ public class Player {
     }
 
     public int getScore() {
+        score = totalCoinValue;
         return score;
     }
 
     public void collectCoin(Coin coin) {
-        this.score += coin.getValue();
+        this.totalCoinValue += coin.getValue();
 
     }
 
