@@ -44,6 +44,25 @@ public class PlayerTest {
         assertThrows(Player.InvalidHealthException.class,
                 () -> new Player("name",-1),
                 "Health should be between 0 to 100");
-
     }
+    @Test
+    public void givenHealth101_thenThrowsInvalidHealthException(){
+        assertThrows(Player.InvalidHealthException.class,
+                () -> new Player("name",101),
+                "Health should be between 0 to 100");
+    }
+
+    @Test
+    public void givenHealth100_whenGetHealthCalled_thenReturn100(){
+        Player player = new Player("name",100);
+        assertEquals(100,player.getHealth());
+    }
+
+    @Test
+    public void givenHealth90_whenGetHealthCalled_thenReturn90(){
+        Player player = new Player("name",90);
+        assertEquals(90,player.getHealth());
+    }
+
+
 }
