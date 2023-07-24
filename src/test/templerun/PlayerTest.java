@@ -87,10 +87,17 @@ public class PlayerTest {
     }
 
     @Test
-    public void given10_whenGetScoreCalled_thenReturn10(){
+    public void givenCoin10_whenGetScoreCalled_thenReturn10(){
         Player player = new Player("name");
         player.collectCoin(new Coin(10));
         assertEquals(10,player.getScore());
+    }
+    @Test
+    public void givenCoins10And20_whenGetScoreCalled_thenReturn30(){
+        Player player = new Player("name");
+        player.collectCoin(new Coin(10));
+        player.collectCoin(new Coin(20));
+        assertEquals(30,player.getScore());
     }
 
 
