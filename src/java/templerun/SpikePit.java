@@ -5,6 +5,9 @@ public class SpikePit extends Obstacle{
     public int width;
     public SpikePit(int width) {
         super("SpikePit",100);
+        if (width < 0 || width < 30){
+            throw new InvalidSpikePitException();
+        }
         this.width = width;
     }
     public void trap(Character character){
@@ -12,4 +15,6 @@ public class SpikePit extends Obstacle{
         character.reduceHealth(damage);
     }
 
+    public class InvalidSpikePitException extends RuntimeException {
+    }
 }
