@@ -13,6 +13,11 @@ public class FireBall extends Obstacle{
         System.out.println("The" + name + "is rolling with speed of" + speed + "mph");
     }
 
+    public int getSpeed() {
+        return 0;
+
+    }
+
     public class InvalidFireBallException extends RuntimeException {
     }
 }
