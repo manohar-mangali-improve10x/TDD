@@ -18,4 +18,10 @@ public class ObstacleTest {
         assertEquals("",obstacle.getName());
     }
 
+    @Test
+    public void givenNameExplorer_returnExplorer(){
+        Obstacle obstacle = new Obstacle("Explorer",100);
+        assertEquals("Explorer",obstacle.getName());
+    }
+
 }
