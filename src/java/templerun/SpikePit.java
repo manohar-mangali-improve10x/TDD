@@ -8,7 +8,7 @@ public class SpikePit extends Obstacle{
         if (width < 0 || width > 30){
             throw new InvalidSpikePitException();
         }
-//        this.width = width;
+        this.width = width;
     }
     public void trap(Character character){
         System.out.println(name + "trapped" + character.getName() + "inside it" + width + "meters");
@@ -16,7 +16,7 @@ public class SpikePit extends Obstacle{
     }
 
     public int getWidth() {
-        return 20;
+        return width;
     }
 
     public class InvalidSpikePitException extends RuntimeException {

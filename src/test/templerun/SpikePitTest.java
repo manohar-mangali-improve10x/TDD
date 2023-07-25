@@ -28,4 +28,9 @@ public class SpikePitTest {
     public void givenWidth20_thenGetWidthCalled_return20(){
         assertEquals(20,new SpikePit(20).getWidth());
     }
+
+    @Test
+    public void givenWidth10_thenGetWidthCalled_return10(){
+        assertEquals(10,new SpikePit(10).getWidth());
+    }
 }
