@@ -11,9 +11,16 @@ public class SpikePitTest {
 
     }
     @Test
-    public void givenMinusOne_thenThrowsInvalidSpikePitException(){
+    public void givenWidthMinusOne_thenThrowsInvalidSpikePitException(){
         assertThrows(SpikePit.InvalidSpikePitException.class,
                 () -> new SpikePit(-1),
+                "SpikePit width between 0 to 30");
+    }
+
+    @Test
+    public void givenWidth31_thenThrowsInvalidSpikePitException(){
+        assertThrows(SpikePit.InvalidSpikePitException.class,
+                () -> new SpikePit(31),
                 "SpikePit width between 0 to 30");
     }
 }
