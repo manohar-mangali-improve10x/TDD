@@ -5,9 +5,11 @@ public class Obstacle {
     public int damage;
 
     public Obstacle(String name, int damage) {
-        this.name = (name == null) ? "" : name;
+        this.name = (name == null) ? "" : name.trim();
         if (damage < 0 || damage >100){
             throw new InvalidDamageException();
+        }else {
+            this.damage = damage;
         }
     }
     public void collide(Character character){
@@ -17,6 +19,10 @@ public class Obstacle {
 
     public String getName() {
         return name;
+    }
+
+    public int getDamage() {
+        return damage;
     }
 
     public class InvalidDamageException extends RuntimeException{
