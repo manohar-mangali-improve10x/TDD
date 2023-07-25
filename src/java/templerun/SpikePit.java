@@ -15,6 +15,10 @@ public class SpikePit extends Obstacle{
         character.reduceHealth(damage);
     }
 
+    public int getWidth() {
+        return 20;
+    }
+
     public class InvalidSpikePitException extends RuntimeException {
     }
 }
