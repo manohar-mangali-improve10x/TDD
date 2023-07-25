@@ -14,7 +14,7 @@ public class FireBall extends Obstacle{
     }
 
     public int getSpeed() {
-        return 0;
+        return speed;
 
     }
 
