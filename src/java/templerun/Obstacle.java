@@ -12,4 +12,8 @@ public class Obstacle {
         System.out.println(name + "has collide with" + character.getName() + "caused" + damage + "damage..");
         character.reduceHealth(damage);
     }
+
+    public String getName() {
+        return "";
+    }
 }

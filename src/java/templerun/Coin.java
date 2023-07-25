@@ -1,9 +1,10 @@
 package templerun;
 
-public class Coin {
+public class Coin extends Obstacle {
     private int value;
 
     public Coin(int value) {
+        super("Coin",0);
         if (value < 0 || value > 100) {
             throw new InvalidCoinValueException();
         }
